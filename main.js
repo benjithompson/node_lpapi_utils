@@ -1,8 +1,9 @@
-import { apiconfig } from "./conf.mjs";
+import 'dotenv/config'
 import { GetAllUsers } from "./GetAllUsers.mjs"
 
 function run(){
-    GetAllUsers(apiconfig);
+    console.log(process.env.DOMAIN);
+    GetAllUsers(process.env);
 }
 
 run()
